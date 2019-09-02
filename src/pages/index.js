@@ -1,37 +1,36 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
-import Navbar from '../components/navbar.js'
-
 import Img from 'gatsby-image'
-
 import BackgroundImage from 'gatsby-background-image'
+
+import Navbar from '../components/navbar.js'
 
 const ourOfferts = [
   {
     name: 'Wulkanizacja',
     description:
       'Wymienimy Twoje opony i wyważymy koła. Przechowamy Twoje opony do następnego sezonu.',
-    imageId: 'opony',
+    imageId: 'wheels',
   },
   {
     name: 'Naprawa i regeneracja silników',
     description:
       'Silnik jest sercem Twojego samochodu. Zadbaj o niego zostawiając swoje auto w naszym serwisie.',
-    imageId: 'silnik',
+    imageId: 'engine',
   },
   {
     name: 'Diagnostyka i naprawa zawieszenia',
     description:
       'Dzięki dobremu zawieszeniu możesz poczuć się komfortowo i bezpiecznie. To naprawdę ważne, tym bardziej na polskich drogach.',
-    imageId: 'zawieszenie',
+    imageId: 'suspension',
     imageAlt: 'Ilustracja przedstwiająca zawieszenie',
   },
   {
     name: 'Przeglądy okresowe',
     description:
       'Wymienimy klocki i tarcze hamulcowe oraz oleje i filtry w Twoim samochodzie.',
-    imageId: 'przeglad',
+    imageId: 'overview',
   },
   {
     name: 'Regeneracja alternatorów',
@@ -42,7 +41,7 @@ const ourOfferts = [
   {
     name: 'Spawalnictwo',
     description: 'To nasza specjalność. Pospawamy prawie wszystko.',
-    imageId: 'spawalnictwo',
+    imageId: 'welding',
   },
 ]
 
@@ -51,31 +50,31 @@ const ourPros = [
     name: 'Jakość',
     description:
       'Mamy nowoczesny warsztat i doświadczonych mechaników. Oferujemy Ci usługi na najwyższym poziomie.',
-    imageId: 'jakosc',
+    imageId: 'quality',
   },
   {
     name: 'Odpowiedzialność',
     description:
       'Twój samochód będzie przygotowany na każdą podróż. Gotowy na przygodę?',
-    imageId: 'odpowiedzialnosc',
+    imageId: 'responsibility',
   },
   {
     name: 'Czas naprawy',
     description:
       'Naprawiamy tak szybko, jak to możliwe. I zawsze zgodnie z terminem.',
-    imageId: 'czas_naprawy',
+    imageId: ' repair_time',
   },
   {
     name: 'Uczciwość',
     description:
       'Jesteśmy uczciwi wobec Ciebie. Robimy dokładnie to, na co się umawiamy.',
-    imageId: 'uczciwosc',
+    imageId: 'honesty',
   },
   {
     name: 'Doświadczenie',
     description:
       'Już od wielu lat dbamy o pojazdy. Pracują u nas doświadczeni serwisanci, którzy naprawdę znają się na rzeczy.',
-    imageId: 'doswiadczenie',
+    imageId: 'experience',
   },
 ]
 
@@ -144,7 +143,7 @@ const IndexPage = ({ className }) => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "home_page.jpg" }) {
+        car_repair_station: file(relativePath: { eq: "home_page.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp
@@ -158,7 +157,7 @@ const IndexPage = ({ className }) => (
             }
           }
         }
-        opony: file(relativePath: { eq: "opony.png" }) {
+        wheels: file(relativePath: { eq: "opony.png" }) {
           childImageSharp {
             fixed(width: 207, height: 188) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
@@ -172,63 +171,63 @@ const IndexPage = ({ className }) => (
             }
           }
         }
-        przeglad: file(relativePath: { eq: "przeglad.png" }) {
+        overview: file(relativePath: { eq: "przeglad.png" }) {
           childImageSharp {
             fixed(width: 283, height: 188) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        silnik: file(relativePath: { eq: "silnik.png" }) {
+        engine: file(relativePath: { eq: "silnik.png" }) {
           childImageSharp {
             fixed(width: 235, height: 188) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        spawalnictwo: file(relativePath: { eq: "spawalnictwo.png" }) {
+        welding: file(relativePath: { eq: "spawalnictwo.png" }) {
           childImageSharp {
             fixed(width: 250, height: 188) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        zawieszenie: file(relativePath: { eq: "zawieszenie.png" }) {
+        suspension: file(relativePath: { eq: "zawieszenie.png" }) {
           childImageSharp {
             fixed(width: 282, height: 188) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        czas_naprawy: file(relativePath: { eq: "czas_naprawy.png" }) {
+        repair_time: file(relativePath: { eq: "czas_naprawy.png" }) {
           childImageSharp {
             fixed(width: 32, height: 32) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        doswiadczenie: file(relativePath: { eq: "doswiadczenie.png" }) {
+        experience: file(relativePath: { eq: "doswiadczenie.png" }) {
           childImageSharp {
             fixed(width: 32, height: 32) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        jakosc: file(relativePath: { eq: "jakosc.png" }) {
+        quality: file(relativePath: { eq: "jakosc.png" }) {
           childImageSharp {
             fixed(width: 32, height: 32) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        odpowiedzialnosc: file(relativePath: { eq: "odpowiedzialnosc.png" }) {
+        responsibility: file(relativePath: { eq: "odpowiedzialnosc.png" }) {
           childImageSharp {
             fixed(width: 32, height: 32) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
-        uczciwosc: file(relativePath: { eq: "uczciwosc.png" }) {
+        honesty: file(relativePath: { eq: "uczciwosc.png" }) {
           childImageSharp {
             fixed(width: 32, height: 32) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
@@ -244,14 +243,15 @@ const IndexPage = ({ className }) => (
           <BackgroundImage
             Tag='section'
             className={className}
-            fluid={data.desktop.childImageSharp.fluid}>
+            alt='Ilustracja w tle przedstawiająca miejsce naprawy aut'
+            fluid={data.car_repair_station.childImageSharp.fluid}>
             <h1>Naprawdę możesz nam zaufać</h1>
             <h2>
               Szukasz dobrego mechanika? Dobrze trafiłeś, ponieważ należycie Cię
               obsłużymy i jesteśmy uczciwi. A co najważniejsze, kochamy to, co
               robimy i pragniemy, żebyś był zadowolony.
             </h2>
-            <h2>Umów wizytę - button!</h2>
+            // <h2>Umów wizytę - button!</h2>
           </BackgroundImage>
           <div>
             {ourPros.map(ourPro => (
@@ -265,7 +265,7 @@ const IndexPage = ({ className }) => (
             <h2>Umów wizytę - button!</h2>
           </BackgroundImage>
           <div>
-            <h1>Gallery???</h1>
+            // <h1>Gallery???</h1>
           </div>
           <div>
             <h1>Rzetelna wycena</h1>
@@ -273,7 +273,7 @@ const IndexPage = ({ className }) => (
               Przed naprawą dowiesz jakie są przewidywane koszty naprawy oraz
               ile ona potrwa.
             </p>
-            <h2>Umów wizytę - button!</h2>
+            // <h2>Umów wizytę - button!</h2>
           </div>
           <div>
             <h1>Co robimy?</h1>
@@ -283,7 +283,7 @@ const IndexPage = ({ className }) => (
           </div>
           <div>
             <h1>Nie musisz szukać dalej</h1>
-            <h2>Umów wizytę - button!</h2>
+            // <h2>Umów wizytę - button!</h2>
           </div>
         </div>
       )
