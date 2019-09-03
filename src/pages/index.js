@@ -4,6 +4,8 @@ import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
+import '../layouts/reset.css'
+
 import Navbar from '../components/navbar.js'
 
 const ourOfferts = [
@@ -62,7 +64,7 @@ const ourPros = [
     name: 'Czas naprawy',
     description:
       'Naprawiamy tak szybko, jak to możliwe. I zawsze zgodnie z terminem.',
-    imageId: ' repair_time',
+    imageId: 'repair_time',
   },
   {
     name: 'Uczciwość',
