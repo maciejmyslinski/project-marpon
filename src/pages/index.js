@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
-
-import '../layouts/reset.css'
+import 'reset-css'
 
 import Navbar from '../components/navbar.js'
 
