@@ -62,7 +62,7 @@ const ourPros = [
     name: 'Czas naprawy',
     description:
       'Naprawiamy tak szybko, jak to możliwe. I zawsze zgodnie z terminem.',
-    imageId: ' repair_time',
+    imageId: 'repair_time',
   },
   {
     name: 'Uczciwość',
