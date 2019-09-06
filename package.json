@@ -22,9 +22,11 @@
     "global": "4.4.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
+    "reset-css": "4.0.1",
     "styled-components": "4.3.2"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "gatsby-plugin-web-font-loader": "1.0.4",
+    "prettier": "1.18.2"
   }
 }
